@@ -1,6 +1,6 @@
 <div>
   <h1>My YouTube playlist</h1>
   <div ng-repeat="item in main.videoList">
-    <youtube-list-item data="{{item}}"></youtube-list-item>
+    <youtube-list-item data="{{item}}" index="{{$index}}"></youtube-list-item>
   </div>
 </div>

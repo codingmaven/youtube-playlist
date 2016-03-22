@@ -1,0 +1,16 @@
+<div class="details-page">
+  <div class="back-link"> <a href="#/"> < Back to list of videos </a></div>
+  <div ng-if="details.selected.snippet">
+    <div class="title"> {{details.selected.snippet.title}}</div>
+    <div class="published"> Published on {{details.selected.snippet.publishedAt | date:'longDate'}}</div>
+    <div class="row container">
+      <div class="image col-sm-6">
+        <div class="embed-responsive embed-responsive-16by9">
+          <youtube-video video-id="details.selected.snippet.resourceId.videoId" class="embed-responsive-item" player-width="'100%'"></youtube-video>
+        </div>
+      </div>
+      <div class="description col-sm-6"> {{details.selected.snippet.description }}</div>
+    </div>
+  </div>
+
+</div>

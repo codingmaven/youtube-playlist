@@ -83,6 +83,31 @@ body {
   }
 }
 
+.details-page {
+  min-height: 300px;
+  .title {
+    font-size: 24px;
+  }
+  .back-link {
+    font-size:18px;
+  }
+  .published {
+    padding-botom:5px;
+  }
+
+  .description {
+    padding-top:5px;
+    font-size:12px;
+  }
+
+  .image {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

@@ -18,6 +18,7 @@ angular.module('youtubeApp')
 
       }
       vm.videoList = data.items;
+      youtubeService.videoList = vm.videoList;
     })
 
     this.awesomeThings = [
