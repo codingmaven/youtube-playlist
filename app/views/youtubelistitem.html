@@ -1,0 +1,11 @@
+<div class="row youtube-list-item">
+  <div class="col-sm-6 col-sm-push-6">
+    <div class="title"> {{videoData.snippet.title}}</div>
+    <div class="published"> Published on {{videoData.snippet.publishedAt | date:'longDate'}}</div>
+    <div class="description hidden-xs"> {{videoData.snippet.description | limitTo: 150}}{{videoData.snippet.description.length > 150 ? '...' : ''}}</div>
+  </div>
+  <div class="col-sm-6 col-sm-pull-6" >
+
+    <img ng-src="{{videoData.snippet.thumbnails.medium.url}}" width="100%">
+  </div>
+</div>
