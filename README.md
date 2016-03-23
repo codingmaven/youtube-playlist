@@ -1,6 +1,6 @@
 # youtube play list
 
-`npm install -g grunt-cli bower`
+`npm install -g grunt-cli bower yo generator-karma generator-angular`
 `gem install compass`
 
 
