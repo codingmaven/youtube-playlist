@@ -1,6 +1,16 @@
 <div>
   <h1>My YouTube playlist</h1>
-  <div ng-repeat="item in main.videoList">
+  <div class="pagination" ng-show="main.videoList.length">
+    <button ng-disabled="main.currentPage == 0" ng-click="main.currentPage=main.currentPage-1">
+      Previous
+    </button>
+    {{main.currentPage+1}}/{{main.numberOfPages()}} Page(s)
+    <button ng-disabled="main.currentPage >= main.videoList.length/main.pageSize - 1" ng-click="main.currentPage=main.currentPage+1">
+      Next
+    </button>
+  </div>
+  <div ng-repeat="item in main.videoList | startFrom:main.currentPage*main.pageSize | limitTo:main.pageSize">
     <youtube-list-item data="{{item}}" index="{{$index}}"></youtube-list-item>
   </div>
+
 </div>
