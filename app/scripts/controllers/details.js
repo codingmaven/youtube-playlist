@@ -13,9 +13,4 @@ angular.module('youtubeApp')
     vm.selected = youtubeService.selectedVideo;
 
     console.log(youtubeService.selectedVideo);
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });

@@ -21,7 +21,7 @@ angular.module('youtubeApp')
           youtubeService.selectedVideo = youtubeService.videoList[scope.index];
           console.log(scope.index);
         }
-        console.log(JSON.parse(scope.data));
+        console.log(scope.data);
       }
     };
   });
