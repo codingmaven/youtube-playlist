@@ -8,9 +8,20 @@
  * Controller of the youtubeApp
  */
 angular.module('youtubeApp')
-  .controller('DetailsCtrl', function (youtubeService) {
+  .controller('DetailsCtrl', function (youtubeService, $routeParams, lodash) {
     var vm = this;
-    vm.selected = youtubeService.selectedVideo;
+    vm.selected = {};
+    youtubeService.getFeed(function(err, data){
+      if(err) {
+        return console.log(err);
 
-    console.log(youtubeService.selectedVideo);
+      }
+      vm.videoList = data.items;
+      vm.videoId = $routeParams.videoId;
+      vm.selected = lodash.find(vm.videoList, {id: vm.videoId});
+      youtubeService.videoList = vm.videoList;
+      console.log(youtubeService.videoList, vm.selected);
+    });
+
+
   });

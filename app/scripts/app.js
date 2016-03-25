@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'youtube-embed'
+    'youtube-embed',
+    'ngLodash'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,7 +26,7 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/details', {
+      .when('/details/:videoId', {
         templateUrl: 'views/details.html',
         controller: 'DetailsCtrl',
         controllerAs: 'details'
